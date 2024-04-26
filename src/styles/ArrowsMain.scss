@@ -1,0 +1,72 @@
+@import '../App.scss';
+
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+    border: none;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    font-size: 5rem;
+    color: $secondary-color;
+    backdrop-filter: blur(8px);
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    &.top {
+        top: 0%;
+        left: 50%;
+        transform: rotateX(180deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateX(0);
+            z-index: 3;
+        }
+    }
+
+    &.right {
+        top: 50%;
+        right: 0%;
+        left: auto;
+        transform: rotateY(180deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateY(0);
+            z-index: 3;
+        }
+    }
+
+    &.left {
+        top: 50%;
+        left: 0%;
+        transform: rotateY(180deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateY(0);
+            z-index: 3;
+        }
+    }
+
+    &.bottom {
+        bottom: 0%;
+        left: 50%;
+        top: auto;
+        transform: rotateX(180deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateX(0);
+            z-index: 3;
+        }
+    }
+
+}

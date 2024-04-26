@@ -1,0 +1,60 @@
+$primary-color: rgba(0, 0, 0, 0.5);
+$secondary-color: rgba(255, 255, 255, 0.5);
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: $primary-color;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+  transform: translate3d(-100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translate3d(0%);
+  transition: opacity 1000ms ease-in, transform 1000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translate3d(0%);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translate3d(100%);
+  transition: opacity 1000ms ease-out, transform 1000ms;
+}

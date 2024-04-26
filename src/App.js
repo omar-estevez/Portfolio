@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React, { useState, useEffect } from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import Intro from './components/Intro';
+import Main from './layout/Main';
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 12000); // 3 seconds delay
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+    <SwitchTransition mode='out-in'>
+      {isLoading ? (
+        <CSSTransition
+          key="1"
+          timeout={1000}
+          classNames="fade"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Intro />
+        </CSSTransition>
+      ) : (
+        <CSSTransition
+          key="2"
+          timeout={1000}
+          classNames="fade"
+        >
+          <Main />
+        </CSSTransition>
+      )}
+    </SwitchTransition>
   );
 }
 
