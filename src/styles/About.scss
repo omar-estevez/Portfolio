@@ -1,0 +1,139 @@
+@import '../App.scss';
+
+.container-about {
+    overflow: auto;
+    padding: 60px 50px;
+    height: auto;
+
+    h2,
+    p {
+        &:hover {
+            color: white;
+        }
+    }
+
+    h2 {
+        font-size: 65px;
+        color: $secondary-color;
+        text-align: center;
+    }
+
+    p {
+        position: absolute;
+        color: $secondary-color;
+
+        &.first {
+            top: 18%;
+            left: 11%;
+            width: 40%;
+            font-size: 25px;
+        }
+
+        &.second {
+            top: 39%;
+            left: 5%;
+            width: 30%;
+            font-size: 30px;
+        }
+
+        &.third {
+            top: 68%;
+            left: 20%;
+            width: 25%;
+            font-size: 28px;
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        width: 50%;
+        top: 22%;
+        right: 1%;
+
+        .background-image {
+            width: 80%;
+            height: auto;
+            border-radius: 5px;
+            transform: rotateZ(-15deg);
+            filter: contrast(140%) grayscale(100%) blur(1px);
+            transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            &:hover {
+                cursor: pointer;
+                transform: rotateZ(0) scale(1.5);
+                filter: none;
+                z-index: 1;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 5%;
+            left: 33%;
+            width: 54%;
+            height: auto;
+            border-radius: 5px;
+            transform: rotateZ(12deg);
+            filter: contrast(140%) grayscale(100%) blur(1px);
+            transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            &:hover {
+                cursor: pointer;
+                transform: rotateZ(0) scale(1.5);
+                filter: none;
+                z-index: 1;
+                left: 0;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 641px) and (max-width: 1007px) {
+        /*Tablets*/
+
+        p {
+            &.first {
+                left: 5%;
+            }
+
+            &.second {
+                top: 54%;
+                left: 5%;
+                width: 46%;
+            }
+
+            &.third {
+                top: 53%;
+                left: 56%;
+                width: 40%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        /*Mobile phones*/
+
+        p {
+            &.first {
+                top: 23%;
+                left: 7%;
+                font-size: 12px;
+            }
+
+            &.second {
+                top: 47%;
+                left: 5%;
+                width: 38%;
+                font-size: 15px;
+            }
+
+            &.third {
+                top: 48%;
+                left: 52%;
+                width: 43%;
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -21,7 +21,8 @@
         font-size: 80px;
     }
 
-    h2 {
+    h4 {
+        font-size: 25px;
         padding: 15px 50px;
         margin: 25px 0;
         border-top: 1px solid $secondary-color;
@@ -49,6 +50,44 @@
         &:active {
             transition-duration: 0.6s;
             transform: scale(0.8);
+        }
+    }
+
+
+    @media only screen and (min-width: 641px) and (max-width: 1007px) {
+        /*Tablets*/
+
+        width: 40%;
+        top: 12%;
+        left: 45%;
+
+        h4 {
+            padding: 15px 30px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        /*Mobile phones*/
+
+        width: 65%;
+        top: 10%;
+        left: 12%;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h4 {
+            font-size: 15px;
+            margin: 10px 0;
+            padding: 15px 20px;
+        }
+
+        button {
+            padding: 14px 45px;
+            margin: 10px 0px;
+            border-radius: 50px;
+            font-size: 12px;
         }
     }
 }

@@ -1,0 +1,101 @@
+@import '../App.scss';
+
+.text {
+    position: absolute;
+    z-index: 1;
+    color: $secondary-color;
+    font-size: 30px;
+
+    &.top {
+        top: 75px;
+        left: 49%;
+    }
+
+    &.right {
+        top: 50%;
+        right: 75px;
+    }
+
+    &.left {
+        top: 50%;
+        left: 75px;
+    }
+
+    &.bottom {
+        bottom: 75px;
+        left: 49%;
+    }
+}
+
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+    border: none;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    font-size: 4rem;
+    color: $secondary-color;
+    backdrop-filter: blur(8px);
+    color: $secondary-color;
+    border-radius: 100%;
+
+    &:hover {
+        cursor: pointer;
+        // background: rgba(0, 0, 0, 0.5);
+    }
+
+    &.top {
+        top: 0.8%;
+        left: 50%;
+        transform: rotateX(180deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateX(0);
+            z-index: 3;
+        }
+    }
+
+    &.right {
+        top: 49%;
+        right: 0.8%;
+        left: auto;
+        transform: rotateZ(270deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateZ(90deg);
+            z-index: 3;
+        }
+    }
+
+    &.left {
+        top: 49%;
+        left: 0.8%;
+        transform: rotateZ(90deg);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateZ(270deg);
+            z-index: 3;
+        }
+    }
+
+    &.bottom {
+        bottom: 0.8%;
+        left: 50%;
+        top: auto;
+        transform: rotateX(0);
+        transition: all 0.9s ease;
+
+        &.active {
+            transform: rotateX(180deg);
+            z-index: 3;
+        }
+    }
+
+}

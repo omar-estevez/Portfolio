@@ -1,10 +1,10 @@
 import '../styles/Main.scss';
 import React, { useState, useRef } from 'react';
 import backgroundVideo from '../assets/videos/Me_aquarium_animation.mp4';
-import Introduction from '../components/Introduction';
-import ArrowsMain from '../components/ArrowsMain';
-import ContentMain from '../components/ContentMain';
-import SocialMediaMain from '../components/SocialMediaMain';
+import Introduction from '../components/main-components/Introduction';
+import ArrowsMain from '../components/main-components/ArrowsMain';
+import ContentMain from '../components/main-components/ContentMain';
+import SocialMediaMain from '../components/main-components/SocialMediaMain';
 
 const Main = () => {
 
@@ -62,7 +62,7 @@ const Main = () => {
 
             <SocialMediaMain introRefSm={introRefSm} />
 
-            <video autoPlay loop muted>
+            <video autoPlay loop muted playsInline>
                 <source src={backgroundVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

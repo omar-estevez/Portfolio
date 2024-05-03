@@ -4,7 +4,7 @@ import video from '../assets/videos/back_intro_pattern.mp4';
 const Intro = () => {
     return (
         <div className='intro-container'>
-            <video className="background-video" autoPlay loop muted>
+            <video className="background-video" autoPlay loop muted playsInline>
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

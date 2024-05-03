@@ -1,4 +1,4 @@
-import '../styles/SocialMediaMain.scss';
+import '../../styles/SocialMediaMain.scss';
 import { IoShareSocial } from "react-icons/io5";
 import { TiSocialFacebook, TiSocialInstagram, TiSocialLinkedin, TiSocialGithub } from "react-icons/ti";
 
@@ -9,8 +9,7 @@ const SocialMediaMain = ({ introRefSm }) => {
 
         switch (type) {
             case 'Share':
-                // url = 'https://www.facebook.com/omar.estevez.95';
-                // window.open(url, '_blank');
+                handleShare();
                 break;
             case 'Facebook':
                 url = 'https://www.facebook.com/omar.estevez.95';
@@ -30,6 +29,23 @@ const SocialMediaMain = ({ introRefSm }) => {
                 break;
             default:
                 break;
+        }
+    };
+
+    const handleShare = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: "Omar's Portfolio",
+                    url: window.location.href
+                });
+                console.log('Content shared successfully');
+            } catch (error) {
+                console.error('Error sharing content:', error);
+            }
+        } else {
+            // Fallback for browsers that do not support the Web Share API
+            console.log('Web Share API is not supported in this browser.');
         }
     };
 

@@ -11,7 +11,8 @@
         left: 0;
         bottom: auto;
         right: auto;
-        background-color: #6c567b;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
         transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
 
         &.active-top {
@@ -24,7 +25,8 @@
         left: 0;
         bottom: auto;
         right: auto;
-        background-color: #48466d;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
         transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active-bottom {
@@ -37,7 +39,8 @@
         left: -100%;
         bottom: auto;
         right: auto;
-        background-color: #4d606e;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
         transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active-left {
@@ -51,7 +54,8 @@
         left: 100%;
         bottom: auto;
         right: auto;
-        background-color: #7f4a88;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
         transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active-right {
