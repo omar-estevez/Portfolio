@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import React, { useState, useEffect } from 'react';
 import p_img_one from '../assets/images/Project_one.png';
 import p_img_two from '../assets/images/Project_two.png';
+import p_img_three from '../assets/images/Project_three.png';
 
 const Projects = ({ mainClassName, isElementActive }) => {
 
@@ -17,9 +18,9 @@ const Projects = ({ mainClassName, isElementActive }) => {
         page: 'https://app.triidy.com/',
         image: p_img_two
     }, {
-        title: 'DGI',
-        page: '',
-        image: 'https://cdn.pixabay.com/photo/2016/07/27/15/56/link-1545625_1280.jpg'
+        title: 'Portfolio',
+        page: 'https://omar-estevez.github.io/portfolio/',
+        image: p_img_three
     }];
 
     const generateCSS = (count) => {

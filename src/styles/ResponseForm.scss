@@ -1,0 +1,22 @@
+@import '../App.scss';
+
+h3{
+    font-size: 45px;
+    color: $secondary-color;
+    text-align: center;
+    &:hover {
+        color: white;
+    }
+
+    @media only screen and (min-width: 641px) and (max-width: 1007px) {
+        /*Tablets*/
+
+    }
+
+    @media only screen and (max-width: 640px) {
+        /*Mobile phones*/
+
+        font-size: 25px;
+
+    }
+}
