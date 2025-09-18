@@ -11,11 +11,10 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 12000); // 3 seconds delay
+    }, 6000); // 3 seconds delay
   }, []);
 
   return (
-
     <SwitchTransition mode='out-in'>
       {isLoading ? (
         <CSSTransition
