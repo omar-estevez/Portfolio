@@ -38,13 +38,18 @@ const Skills = ({ mainClassName }) => {
         secondColor: '#2c3e50'
     }, {
         name: 'REACT NATIVE',
-        completed: 20,
+        completed: 60,
         color: 'RGB(97, 219, 251)',
         secondColor: 'RGB(217, 217, 217)'
     }, {
         name: 'JAVA',
-        completed: 10,
-        color: 'RGB: (241, 101, 41)',
+        completed: 20,
+        color: 'RGB(181, 46, 49)',
+        secondColor: 'RGB(38, 77, 228)',
+    }, {
+        name: 'PYTHON',
+        completed: 30,
+        color: 'RGB(240, 219, 79)',
         secondColor: 'RGB(73, 138, 255)'
     }];
 

@@ -6,10 +6,11 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
     color: rgb(82, 181, 181);
     font-weight: bold;
-    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 2px 2px 1px 0 rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px 1px rgba(0, 0, 0, 0.1);
     padding: 45px 20px;
     border-radius: 10px;
     top: 20%;
@@ -17,7 +18,7 @@
     text-align: center;
     transition: transform 0.3s;
     will-change: transform;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 
     .icons {
         font-size: 4rem;
